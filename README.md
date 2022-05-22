@@ -35,5 +35,25 @@ ps u
 kill -STOP pid
 ```
 
+## Режимы файлов и права доступа
+![Screenshot from 2022-05-22 20-03-54](https://user-images.githubusercontent.com/72094319/169706979-0331d6c7-6e9f-4f64-aea0-0ef6ca8c86e1.png)
+![Screenshot from 2022-05-22 20-07-31](https://user-images.githubusercontent.com/72094319/169707079-f3bd1877-0d5d-429c-bd40-275bb1de8391.png)
+![Screenshot from 2022-05-22 20-09-15](https://user-images.githubusercontent.com/72094319/169707151-b1b8d457-680a-4a78-86d2-d7ed7713e661.png)
+
+* '-' - обычный файл
+* d - директория
+* l - символическая ссылка (по сути, как ярлык в Windows)
+* r - файл доступен для чтения
+* w - файл доступен для записи
+* x - файл является исполняемым
+
+### Изменение прав доступа
+
+```sh
+chmod go+r file
+```
+Разрешить читать файл все участникам группы (g) и остальным (o)
+
 ## Source
 1. How Linux Works: What Every Superuser Should Know - Brian Ward
+2. https://www.pathname.com/fhs/pub/fhs-2.3.pdf
